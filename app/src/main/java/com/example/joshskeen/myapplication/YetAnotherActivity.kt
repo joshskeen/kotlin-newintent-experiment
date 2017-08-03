@@ -25,6 +25,7 @@ class YetAnotherActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val findViewById = findViewById<Button>(R.id.button)
+
         findViewById.setOnClickListener {
             ASecondActivity.startIntent(this, {
                 it.secondActivityMessage = "hello from yet another activity"
@@ -36,7 +37,8 @@ class YetAnotherActivity : AppCompatActivity() {
             Log.d(TAG, "for message property got: " + it.message)
             Log.d(TAG, "for rad value got: " + it.rad_value)
         }
-    }
 
+
+    }
 
 }

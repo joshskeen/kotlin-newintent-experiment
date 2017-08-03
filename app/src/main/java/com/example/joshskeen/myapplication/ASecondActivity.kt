@@ -31,6 +31,14 @@ class ASecondActivity : AppCompatActivity() {
                 it.rad_value = 42
             })
         }
+        val newFragment = MyFragment.newFragment {
+            it.arg1 = "SNAP!"
+        }
+
+        savedInstanceState ?: supportFragmentManager
+                .beginTransaction()
+                .add(R.id.fragment_container, newFragment)
+                .commit()
 
         intent.options {
             Log.d(TAG, "for message property got: " + it.secondActivityMessage)
