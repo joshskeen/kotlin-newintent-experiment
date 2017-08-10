@@ -18,10 +18,11 @@ class MyFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        MyFragment.newFragment()
-        arguments.options {
-            val arg1 = it.arg1
-            println(arg1)
+        val newFragment = MyFragment.newFragment {
+            arguments.options {
+                val arg1 = it.arg1
+                println(arg1)
+            }
         }
     }
 }
